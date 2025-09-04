@@ -1,5 +1,7 @@
 import Image from "next/image"
 import { Phone, MessageCircle, Mail } from "lucide-react"
+import FAQs from "./FAQ"
+import { depfinFaqs } from "@/utils/FaqData"
 
 export default function Queries() {
   return (
@@ -86,8 +88,10 @@ export default function Queries() {
         </div>
 
         {/* FAQs Placeholder */}
-        <div className="w-full h-[500px] md:h-[600px] bg-gray-50 border rounded-lg hidden md:block">
-          <p className="text-center text-gray-500 py-20">FAQs go here...</p>
+        <div className="w-1/2 h-[500px] md:h-[600px]">
+         <FAQs
+          data={depfinFaqs}
+         />
         </div>
       </div>
     </div>

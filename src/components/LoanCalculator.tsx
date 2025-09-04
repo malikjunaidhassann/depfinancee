@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, ChangeEvent } from "react"
+import { useRouter } from "next/navigation"
 import { Minus, Plus } from "lucide-react"
 // import dynamic from "next/dynamic"
 
@@ -29,6 +30,7 @@ function LoanForm({
   addLoanDetails,
 }: LoanFormProps) {
   const [showDisclaimer, setShowDisclaimer] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const timer = setTimeout(() => setShowDisclaimer(true), 2500)
@@ -37,7 +39,7 @@ function LoanForm({
 
   return (
     <div className="flex flex-col w-full h-full">
-      <div className="relative left-12 max-w-md h-[450px] p-4 bg-white rounded-md font-sans shadow-md md:left-0">
+      <div className="relative md:left-22 left-0 max-w-md h-[450px] p-4 bg-white rounded-md font-sans shadow-md md:left-0">
         <h2 className="text-2xl font-medium text-gray-900 text-center mb-5">
           Loan Calculator
         </h2>
@@ -97,8 +99,11 @@ function LoanForm({
 
         {/* CTA */}
         <button
-          onClick={addLoanDetails}
-          className="w-full py-2 mt-4 rounded-lg bg-teal-600 text-white text-xl font-bold hover:bg-teal-700 transition"
+          onClick={() => {
+            addLoanDetails()
+            router.push('/personal/business/loan/apply')
+          }}
+          className="w-full py-2 mt-4 rounded-lg bg-teal-600 text-white text-sm font-bold hover:bg-teal-700 transition"
         >
           Apply online
         </button>

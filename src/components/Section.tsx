@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { CheckIcon } from "lucide-react"
 import Hero from "../../public/herobgimg.webp"
+import Testimonials from "./Testimonials"
+import Stepper from "./Steeper"
 
 function Section() {
   return (
@@ -83,9 +85,10 @@ function Section() {
             Why Choose Depfin Finance?
           </h4>
           <div className="min-h-[200px] w-full flex items-center justify-center">
-            {/* Placeholder content */}
-            <p className="text-gray-500 text-sm md:text-lg lg:text-xl">Fast and Secure Process · Reasonable Terms and APR · Instant Access Online</p>
-          </div>
+            <Stepper
+          
+            />
+            </div>
         </div>
 
         {/* Testimonials Section */}
@@ -93,17 +96,7 @@ function Section() {
           <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#063940] uppercase mb-5 text-center">
             What clients are saying
           </h4>
-          <div className="min-h-[400px] w-full flex items-center justify-center">
-            {/* Placeholder content */}
-            <blockquote className="text-center italic max-w-[600px] text-sm md:text-lg lg:text-xl">
-              &ldquo;The team was thorough, transparent and quick as responding and
-              answering my questions. We got the loan done in a matter of a few
-              days. I am looking forward to building a long lasting business
-              relationship with Depfin Finance Loans.&rdquo;
-              <br />
-              <span className="font-bold">— Harry de Beer</span>
-            </blockquote>
-          </div>
+          <Testimonials/>
         </div>
       </div>
     </div>

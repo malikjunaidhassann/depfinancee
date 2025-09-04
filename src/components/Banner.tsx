@@ -57,7 +57,7 @@ function Banner() {
 
           <Link
             href="/personal/business/loan/apply"
-            className="mt-6 md:mt-8 px-6 md:px-8 py-3 md:py-4 rounded-lg bg-[#063940] text-white text-lg md:text-xl font-bold uppercase text-center w-fit hover:bg-[#004d4d] transition-colors duration-200"
+            className="mt-4 md:mt-8 px-4 md:px-8 py-2 md:py-4 rounded-lg bg-[#063940] text-white text-sm md:text-xl font-bold uppercase text-center w-fit hover:bg-[#004d4d] transition-colors duration-200"
             aria-label="Apply for loan now"
           >
             Apply Now!
