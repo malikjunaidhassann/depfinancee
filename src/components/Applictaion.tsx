@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { calculateLoanRepaymentMonthly } from "../Services/Calculator";
 import { ToastContainer, toast } from "react-toastify";
 import { useSelector } from "react-redux";
@@ -305,10 +305,8 @@ const Application: React.FC = () => {
 
           <div className="flex items-center gap-2 mt-3">
             <input type="checkbox" defaultChecked />
-            <Link href="/terms">
-              <a className="text-sm text-gray-700">
-                Accept <span className="text-teal-600">terms and conditions</span>
-              </a>
+            <Link href="/terms" className="text-sm text-gray-700">
+              Accept <span className="text-teal-600">terms and conditions</span>
             </Link>
           </div>
         </div>
